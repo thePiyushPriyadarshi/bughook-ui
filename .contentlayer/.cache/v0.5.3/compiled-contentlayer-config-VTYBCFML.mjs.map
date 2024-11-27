@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from 'contentlayer2/source-files'\r\n\r\nconst Docs = defineDocumentType(() => ({\r\n  name: 'Docs',\r\n  filePathPattern: `docs/**/*.mdx`,  // Make sure this pattern matches the actual file path\r\n  contentType: 'mdx',\r\n  fields: {\r\n    title: { type: 'string' },\r\n    description: { type: 'string' },\r\n  },\r\n  computedFields: {\r\n    slug: { type: 'string', resolve: (doc) => doc?.title?.toLowerCase().replace(/\\s+/g, '-') },\r\n  },\r\n}));\r\n\r\nexport default makeSource({\r\n  contentDirPath: './content',  // This folder should contain your MDX files\r\n  documentTypes: [Docs],      // Register Docs document type here\r\n  disableImportAliasWarning: true,\r\n});\r\n"],
+  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAE/C,IAAM,OAAO,mBAAmB,OAAO;AAAA,EACrC,MAAM;AAAA,EACN,iBAAiB;AAAA;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACN,OAAO,EAAE,MAAM,SAAS;AAAA,IACxB,aAAa,EAAE,MAAM,SAAS;AAAA,EAChC;AAAA,EACA,gBAAgB;AAAA,IACd,MAAM,EAAE,MAAM,UAAU,SAAS,CAAC,QAAQ,KAAK,OAAO,YAAY,EAAE,QAAQ,QAAQ,GAAG,EAAE;AAAA,EAC3F;AACF,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA;AAAA,EAChB,eAAe,CAAC,IAAI;AAAA;AAAA,EACpB,2BAA2B;AAC7B,CAAC;",
+  "names": []
+}
