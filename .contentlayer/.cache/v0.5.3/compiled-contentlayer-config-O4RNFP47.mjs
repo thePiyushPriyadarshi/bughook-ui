@@ -1,67 +1,39 @@
+// contentlayer.config.ts
 import {
   defineDocumentType,
   defineNestedType,
-  makeSource,
+  makeSource
 } from "contentlayer2/source-files";
-
-
-
-// Define nested type for `links`
-const LinksProperties = defineNestedType(() => ({
+var LinksProperties = defineNestedType(() => ({
   name: "LinksProperties",
   fields: {
     doc: { type: "string" },
-    api: { type: "string" },
-  },
+    api: { type: "string" }
+  }
 }));
-
-// Main document type definition
-export const Doc = defineDocumentType(() => ({
+var Doc = defineDocumentType(() => ({
   name: "Doc",
   filePathPattern: `docs/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
-    links: { type: "nested", of: LinksProperties },
+    links: { type: "nested", of: LinksProperties }
   },
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+      resolve: (doc) => `/${doc._raw.flattenedPath}`
     },
     slugAsParams: {
       type: "string",
-      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-    },
-  },
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/")
+    }
+  }
 }));
-
-// // Custom rehype plugin to process code blocks
-// const customCodeBlockProcessor: Plugin = () => (tree) => {
-//   visit(tree, (node: any) => {
-//     if (node?.type === "element" && node?.tagName === "pre") {
-//       const codeElement = node.children?.[0];
-//       if (codeElement?.tagName !== "code") return;
-
-//       // Extract metadata
-//       if (codeElement.data?.meta) {
-//         const eventMatch = codeElement.data.meta.match(/event="([^"]*)"/);
-//         if (eventMatch) {
-//           node.__event__ = eventMatch[1];
-//           codeElement.data.meta = codeElement.data.meta.replace(/event="[^"]*"/, "");
-//         }
-//       }
-//       console.log(codeElement)
-//       node.__rawString__ = codeElement.children?.[0]?.value;
-//     }
-//   });
-// };
-
-// Contentlayer source configuration
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "./content",
-  documentTypes: [Doc],
+  documentTypes: [Doc]
   // mdx: {
   //   remarkPlugins: [remarkGfm, codeImport],
   //   rehypePlugins: [
@@ -83,7 +55,6 @@ export default makeSource({
   //           node.properties.className = ["word--highlighted"];
   //         },
   //       },
-
   //     ],
   //     customCodeBlockProcessor,
   //     [
@@ -98,3 +69,8 @@ export default makeSource({
   //   ],
   // },
 });
+export {
+  Doc,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-O4RNFP47.mjs.map

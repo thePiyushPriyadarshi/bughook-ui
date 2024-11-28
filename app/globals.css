@@ -123,5 +123,5 @@ body {
 }
 
 pre{
-  @apply overflow-x-auto overflow-y-auto text-sm no-scrollbar max-w-full p-4
+  @apply overflow-x-auto overflow-y-auto h-full text-sm no-scrollbar max-w-full p-4
 }

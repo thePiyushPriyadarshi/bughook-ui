@@ -1,27 +1,26 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 
 interface ComponentPreviewProps {
-  name: string;
+  directory: string;
+  fileName: string;
 }
-export function ComponentPreview({ name }: ComponentPreviewProps) {
+export function ComponentPreview({ directory, fileName }: ComponentPreviewProps) {
   const loadComponent = async () => {
-    const modules = await import(`@/components/ui/${name}`);
-    const componentName = name[0].toUpperCase() + name.slice(1); 
-    if (modules[componentName]) {
-      return modules[componentName]; // Ensure the named export exists
-    }
-    throw new Error(`Component '${componentName}' not found in the module.`);
+    return await import(`@/demo/components/${directory}/${fileName}`); 
   };
-  const Component = React.lazy(() => loadComponent().then((component) => ({ default: component })));
+  const Component = React.lazy(() => loadComponent()); 
 
   return (
     <div className="flex items-center justify-center border rounded-lg min-h-[350px]">
-
-    <Suspense fallback={<div>Loading...</div>}> 
-      <Component>
-        Click Me
-      </Component>
-    </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Component />
+      </Suspense>
     </div>
   );
+}
+
+import { Button } from "@/components/ui/button";
+
+export default function ButtonDemo() {
+  return <Button>Button</Button>;
 }

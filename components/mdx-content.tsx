@@ -1,19 +1,14 @@
-"use client";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-// import { Steps, Step } from '@/components/ui/steps';
-import { ComponentPreview } from "@/components/component-preview";
-import { ComponentSource } from "@/components/component-source";
-import { cn } from "@/lib/utils";
-import { CopyButton } from "./copy-button";
+import { cn } from "@/lib/utils"; 
+import { ComponentBlock } from "@/components/component-block";
 // Custom MDX Components
 const components = {
   Tabs,
   TabsList,
   TabsTrigger,
-  TabsContent,
-  ComponentPreview,
-  ComponentSource,
+  TabsContent, 
+  ComponentBlock,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -124,33 +119,33 @@ const components = {
       {...props}
     />
   ),
-  pre: ({
-    className,
-    __rawString__,
-    ...props
-  }: React.HTMLAttributes<HTMLPreElement> & {
-    __rawString__?: string;
-  }) => {
-    return (
-      <div className="relative">
-        <pre className={className} {...props} />
+  // pre: ({
+  //   className,
+  //   __rawString__,
+  //   ...props
+  // }: React.HTMLAttributes<HTMLPreElement> & {
+  //   __rawString__?: string;
+  // }) => {
+  //   return (
+  //     <div className="relative">
+  //       <pre className={""} {...props} />
         
-          <CopyButton
-            value={__rawString__ || ""}
-            className={"absolute right-3 top-3"}
-          />
-      </div>
-    );
-  },
-  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code
-      className={cn(
-        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm",
-        className
-      )}
-      {...props}
-    />
-  ),
+  //         <CopyButton
+  //           value={__rawString__ || ""}
+  //           className={"absolute right-3 top-3"}
+  //         />
+  //     </div>
+  //   );
+  // },
+  // code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+  //   <code
+  //     className={cn(
+  //       "relative rounded bg-red-500 px-[0.3rem] py-[0.2rem] font-mono text-sm",
+  //       className
+  //     )}
+  //     {...props}
+  //   />
+  // ),
 };
 const MDXContent = ({ code }: { code: string }) => {
   const MDXComponent = useMDXComponent(code);

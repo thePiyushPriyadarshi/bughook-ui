@@ -16,7 +16,7 @@ const CodeExpandable = ({ children }: { children: string }) => {
     <div className="relative">
       <ScrollArea
         className={`relative rounded-lg border transition-all ${
-          isExpanded ? "h-[500px]" : "h-[350px] pointer-events-none"
+          isExpanded ? "max-h-[500px]" : "max-h-[350px] pointer-events-none"
         }`}
       > 
 
@@ -32,7 +32,7 @@ const CodeExpandable = ({ children }: { children: string }) => {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-      <div className="absolute bottom-8 left-[50%] translate-x-[-50%]">
+      <div className={cn("absolute bottom-8 left-[50%] translate-x-[-50%]",isExpanded && "-bottom-12")}>
         <Button
           variant="secondary"
           className="text-xs bg-neutral-900 text-white hover:bg-neutral-800 font-semibold"

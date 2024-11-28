@@ -1,0 +1,28 @@
+{
+  "cacheItemsMap": {
+    "docs/button.mdx": {
+      "document": {
+        "title": "Button",
+        "description": "Displays a button or a component that looks like a button. \r",
+        "body": {
+          "raw": "# Button \r\n<ComponentBlock directory=\"button\" fileName=\"index\" description=\"A button\" />\r\n\r\n\r\n",
+          "code": "var Component=(()=>{var p=Object.create;var i=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var _=(t,o)=>()=>(o||t((o={exports:{}}).exports,o),o.exports),b=(t,o)=>{for(var n in o)i(t,n,{get:o[n],enumerable:!0})},s=(t,o,n,c)=>{if(o&&typeof o==\"object\"||typeof o==\"function\")for(let r of x(o))!h.call(t,r)&&r!==n&&i(t,r,{get:()=>o[r],enumerable:!(c=l(o,r))||c.enumerable});return t};var j=(t,o,n)=>(n=t!=null?p(f(t)):{},s(o||!t||!t.__esModule?i(n,\"default\",{value:t,enumerable:!0}):n,t)),k=t=>s(i({},\"__esModule\",{value:!0}),t);var m=_((M,a)=>{a.exports=_jsx_runtime});var B={};b(B,{default:()=>d,frontmatter:()=>y});var e=j(m()),y={title:\"Button\",description:\"Displays a button or a component that looks like a button.\"};function u(t){let o={h1:\"h1\",...t.components},{ComponentBlock:n}=o;return n||g(\"ComponentBlock\",!0),(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(o.h1,{children:\"Button\"}),`\n`,(0,e.jsx)(n,{directory:\"button\",fileName:\"index\",description:\"A button\"})]})}function d(t={}){let{wrapper:o}=t.components||{};return o?(0,e.jsx)(o,{...t,children:(0,e.jsx)(u,{...t})}):u(t)}function g(t,o){throw new Error(\"Expected \"+(o?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return k(B);})();\n;return Component;"
+        },
+        "_id": "docs/button.mdx",
+        "_raw": {
+          "sourceFilePath": "docs/button.mdx",
+          "sourceFileName": "button.mdx",
+          "sourceFileDir": "docs",
+          "contentType": "mdx",
+          "flattenedPath": "docs/button"
+        },
+        "type": "Doc",
+        "slug": "/docs/button",
+        "slugAsParams": "button"
+      },
+      "documentHash": "1732804112641",
+      "hasWarnings": false,
+      "documentTypeName": "Doc"
+    }
+  }
+}
