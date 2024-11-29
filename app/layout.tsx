@@ -29,7 +29,7 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <Navbar />
-            <main className="mt-14 w-11/12 mx-auto">{children}</main>
+            <main className="mt-14 w-full">{children}</main>
           </SidebarProvider>
         </ThemeProvider>
       </body>

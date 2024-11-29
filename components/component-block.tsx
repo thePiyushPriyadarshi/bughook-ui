@@ -19,7 +19,7 @@ export async function ComponentBlock({ fileName,directory }: ComponentBlockProps
         <TabsTrigger value="preview">Preview</TabsTrigger>
         <TabsTrigger value="code">Code</TabsTrigger>
       </TabsList>
-      <Separator className="-mt-1" />
+      <Separator className="-mt-1 mb-5" />
 
       <div className="relative">
         <CopyButton className="absolute z-50 top-3 right-3" value={code} />

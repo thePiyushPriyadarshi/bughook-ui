@@ -30,7 +30,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenu>
             {sidebarData.map((item) => (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton className="font-medium"> 
+                <SidebarMenuButton className="font-medium pointer-events-none"> 
                     {item.title} 
                 </SidebarMenuButton>
                 {item.items?.length ? (
