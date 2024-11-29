@@ -11,8 +11,9 @@
 !.yarn/versions
 
 
-# content layer
-/.contentlayer
+# Ignore Contentlayer-generated files
+.contentlayer/ 
+
 
 # testing
 /coverage

@@ -1,13 +1,8 @@
-import { useMDXComponent } from "next-contentlayer2/hooks";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useMDXComponent } from "next-contentlayer2/hooks"; 
 import { cn } from "@/lib/utils"; 
 import { ComponentBlock } from "@/components/component-block";
 // Custom MDX Components
-const components = {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent, 
+const components = { 
   ComponentBlock,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -147,10 +142,16 @@ const components = {
   //   />
   // ),
 };
-const MDXContent = ({ code }: { code: string }) => {
-  const MDXComponent = useMDXComponent(code);
 
-  return <MDXComponent components={components} />;
+
+interface MDXContentProps {
+  code: string;
+}
+
+const MDXContent: React.FC<MDXContentProps> = ({ code }) => {
+  const Component = useMDXComponent(code);
+
+  return <Component components={components} />;
 };
 
 export default MDXContent;

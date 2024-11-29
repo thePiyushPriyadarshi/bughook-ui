@@ -1,6 +1,6 @@
 import { AppSidebar } from "@/components/app-sidebar";
 
-export default function RootLayout({
+export default function DocsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

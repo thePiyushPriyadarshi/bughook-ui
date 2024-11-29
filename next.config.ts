@@ -1,16 +1,13 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+import { createContentlayerPlugin } from 'next-contentlayer2'
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig:NextConfig = {
+  // your config options here
+}
+const withContentlayer = createContentlayerPlugin({
+  // Additional Contentlayer config options
+})
+export default withContentlayer(nextConfig)
 
-// next.config.js
-// const withMDX = require('@next/mdx')({
-//   extension: /\.mdx?$/, // Support .mdx and .md files
-// });
-
-// module.exports = withMDX({
-//   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-// });

@@ -1,21 +1,21 @@
-import { allDocs } from "@/.contentlayer/generated";
+import { allDocs } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import MDXContent from "@/components/mdx-content";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+// import { Metadata } from "next";
 
-interface Props {
-  params: Promise<Record<string, string>>;
-}
-export default async function Page({ params }: Props) {
-  const { slug: componentName } = await params;
-  const doc = allDocs.find((doc) => doc.slugAsParams === componentName);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function DocsPage({ params }: any) {
+  const {slug} = await params; 
+
+  const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
   if (!doc) {
     return notFound();
@@ -36,8 +36,14 @@ export default async function Page({ params }: Props) {
         <h1 className="text-3xl font-bold">{doc.title}</h1>
         <p className="text-muted-foreground">{doc.description}</p>
       </div>
-
-      <MDXContent code={doc?.body?.code} />
+      {doc.body?.code && <MDXContent code={doc.body.code} />}
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // Generate a list of all slugs to build static pages
+  return allDocs.map((doc) => ({
+    slug: doc.slugAsParams, 
+  }));
 }
