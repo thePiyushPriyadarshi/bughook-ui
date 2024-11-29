@@ -12,7 +12,7 @@
 
 
 # Ignore Contentlayer-generated files
-.contentlayer/ 
+.contentlayer 
 
 
 # testing
