@@ -20,8 +20,8 @@ export const sidebarData=[
           url: "/docs/button",
         },
         {
-          title: "Calendar",
-          url: "/docs/calendar", 
+          title: "FAQ",
+          url: "/docs/faq", 
         },
         {
           title: "Examples",

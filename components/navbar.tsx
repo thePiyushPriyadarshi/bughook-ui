@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href={"/"} className="md:flex hidden items-center">
           <Image src={"/light-logo.png"} alt="logo" className="hidden dark:block" width={50} height={50}/>
           <Image src={"/dark-logo.png"} alt="logo" className="block dark:hidden" width={50} height={50}/>
-          <h1 className="font-bold text-xl hidden sm:block">Bughook UI</h1>
+          <h1 className="font-bold text-xl hidden font-sans sm:block">Bughook UI</h1>
         </Link>
       </div>
       <div className="hidden md:flex gap-3 items-center font-medium text-muted-foreground justify-center">
