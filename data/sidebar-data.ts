@@ -20,6 +20,10 @@ export const sidebarData=[
           url: "/docs/button",
         },
         {
+          title: "Gemini effect",
+          url: "/docs/gemini-effect", 
+        },
+        {
           title: "FAQ",
           url: "/docs/faq", 
         },
