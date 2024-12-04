@@ -108,7 +108,7 @@ const components = {
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        "px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "px-4 py-2 text-left text-blue-600 [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}

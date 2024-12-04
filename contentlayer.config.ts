@@ -1,8 +1,10 @@
+import remarkGfm from 'remark-gfm';
 import {
   defineDocumentType,
   defineNestedType,
   makeSource,
 } from "contentlayer2/source-files";
+
 
 
 
@@ -62,39 +64,40 @@ export const Doc = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Doc],
-  // mdx: {
-  //   remarkPlugins: [remarkGfm, codeImport],
-  //   rehypePlugins: [
-  //     rehypeSlug,
-  //     [
-  //       rehypePrettyCode,
-  //       {
-  //         theme: "kanagawa-dragon",
-  //         getHighlighter,
-  //         onVisitLine(node: any) {
-  //           if (!node.children.length) {
-  //             node.children = [{ type: "text", value: " " }];
-  //           }
-  //         },
-  //         onVisitHighlightedLine(node: any) {
-  //           node.properties.className.push("line--highlighted");
-  //         },
-  //         onVisitHighlightedWord(node: any) {
-  //           node.properties.className = ["word--highlighted"];
-  //         },
-  //       },
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    // remarkPlugins: [remarkGfm, codeImport],
+    // rehypePlugins: [
+    //   rehypeSlug,
+    //   [
+    //     rehypePrettyCode,
+    //     {
+    //       theme: "kanagawa-dragon",
+    //       getHighlighter,
+    //       onVisitLine(node: any) {
+    //         if (!node.children.length) {
+    //           node.children = [{ type: "text", value: " " }];
+    //         }
+    //       },
+    //       onVisitHighlightedLine(node: any) {
+    //         node.properties.className.push("line--highlighted");
+    //       },
+    //       onVisitHighlightedWord(node: any) {
+    //         node.properties.className = ["word--highlighted"];
+    //       },
+    //     },
 
-  //     ],
-  //     customCodeBlockProcessor,
-  //     [
-  //       rehypeAutolinkHeadings,
-  //       {
-  //         properties: {
-  //           className: ["subheading-anchor"],
-  //           ariaLabel: "Link to section",
-  //         },
-  //       },
-  //     ],
-  //   ],
-  // },
+    //   ],
+    //   customCodeBlockProcessor,
+    //   [
+    //     rehypeAutolinkHeadings,
+    //     {
+    //       properties: {
+    //         className: ["subheading-anchor"],
+    //         ariaLabel: "Link to section",
+    //       },
+    //     },
+    //   ],
+    // ],
+  },
 });

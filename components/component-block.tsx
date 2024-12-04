@@ -10,8 +10,9 @@ import { CopyButton } from "./copy-button";
 interface ComponentBlockProps {
   directory:string;
   fileName: string;
+  dottedBackground?:boolean
 }
-export async function ComponentBlock({ fileName,directory }: ComponentBlockProps) {
+export async function ComponentBlock({ fileName,directory,dottedBackground=true }: ComponentBlockProps) {
   const code = await readSourceCode(`demo/components/${directory}/${fileName}.tsx`);
   return (
     <Tabs defaultValue="preview">
@@ -24,7 +25,7 @@ export async function ComponentBlock({ fileName,directory }: ComponentBlockProps
       <div className="relative">
         <CopyButton className="absolute z-50 top-3 right-3" value={code} />
         <TabsContent value="preview">
-          <ComponentPreview directory={directory} fileName={fileName} />
+          <ComponentPreview directory={directory} fileName={fileName} dottedBackground={dottedBackground}/>
         </TabsContent>
         <TabsContent value="code">
           <ComponentSource code={code} />

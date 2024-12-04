@@ -5,10 +5,12 @@ import { cn } from "@/lib/utils";
 interface ComponentPreviewProps {
   directory: string;
   fileName: string;
+  dottedBackground: boolean;
 }
 export function ComponentPreview({
   directory,
   fileName,
+  dottedBackground
 }: ComponentPreviewProps) {
   const loadComponent = async () => {
     return await import(`@/demo/components/${directory}/${fileName}`);
@@ -22,11 +24,13 @@ export function ComponentPreview({
           <Component />
         </Suspense>
       </div>
-      <DotPattern
-        className={cn(
-          "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
-        )}
-      />
+      {dottedBackground && (
+        <DotPattern
+          className={cn(
+            "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+          )}
+        />
+      )}
     </div>
   );
 }

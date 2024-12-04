@@ -1,14 +1,13 @@
-import { GeminiEffect } from "@/components/ui/gemini-effect";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 export default function TestPage() {
   return (
-    <div className="my-5 flex flex-col items-center justify-center">
-      <GeminiEffect
-        title="Welcome to Bughook UI"
-        description="Power Your Projects with Bughook UI Components"
-      />
-        <div className="h-80">
-        COntent
+    <div
+      className="flex flex-col items-center
+     justify-center gap-10 my-10"
+    >
+      <div className="my-10">
+        <TextShimmer variant="default" className="text-xl">Generating code...</TextShimmer>
       </div>
     </div>
   );
