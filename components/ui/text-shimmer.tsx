@@ -37,7 +37,7 @@ const variantStyles = {
     transition: { duration: 0.75, ease: "linear", repeat: Infinity },
   },
   reverse: {
-    backgroundSize: "450% 100%",
+    backgroundSize: "100% 100%",
     initialBackgroundPosition: "0% center",
     backgroundPosition: "100% center",
     transition: { duration: 1, ease: "linear", repeat: Infinity },
@@ -51,7 +51,7 @@ export function TextShimmer({
   animationDuration = 2,
 }: TextShimmerProps) {
   const combinedClasses = cn(
-    "bg-gradient-to-l relative inline-block from-gray-300 via-gray-700 to-gray-300 bg-clip-text text-transparent",
+    "bg-gradient-to-r relative inline-block from-gray-300 via-gray-700 to-gray-300 bg-clip-tex text-transparent",
     className
   );
 
@@ -60,8 +60,6 @@ export function TextShimmer({
   const transitionStyle = {
     ...currentVariantStyles.transition,
     duration: animationDuration,
-    ease: "linear",
-    repeat: Infinity,
   };
 
   return (

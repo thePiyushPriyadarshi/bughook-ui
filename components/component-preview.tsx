@@ -18,7 +18,7 @@ export function ComponentPreview({
   const Component = React.lazy(() => loadComponent());
 
   return (
-    <div className="flex relative items-center justify-center border rounded-lg min-h-[350px]">
+    <div className="flex relative items-center p-5 justify-center border rounded-lg min-h-[350px]">
       <div className="z-10">
         <Suspense fallback={<div>Loading...</div>}>
           <Component />

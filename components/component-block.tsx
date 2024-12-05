@@ -15,7 +15,7 @@ interface ComponentBlockProps {
 export async function ComponentBlock({ fileName,directory,dottedBackground=true }: ComponentBlockProps) {
   const code = await readSourceCode(`demo/components/${directory}/${fileName}.tsx`);
   return (
-    <Tabs defaultValue="preview">
+    <Tabs defaultValue="preview" className="my-5">
       <TabsList className="bg-transparent p-0 w-56 grid grid-cols-2 gap-5">
         <TabsTrigger value="preview">Preview</TabsTrigger>
         <TabsTrigger value="code">Code</TabsTrigger>

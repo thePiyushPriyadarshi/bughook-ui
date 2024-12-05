@@ -28,8 +28,8 @@ export const sidebarData = [
         url: "/docs/text-shimmer",
       },
       {
-        title: "FAQ",
-        url: "/docs/faq",
+        title: "Fade Text",
+        url: "/docs/fade-text",
       },
       {
         title: "Examples",

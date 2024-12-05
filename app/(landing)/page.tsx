@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -9,10 +9,10 @@ export default function Home() {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="max-w-[768px] w-11/12 mx-auto py-10">
-        <div>
-          <h1 className="text-4xl md:text-6xl leading-20 font-black">
-            Power Your Projects with Bughook UI Components
-          </h1>
+        <div> 
+            <h1 className="text-4xl md:text-6xl leading-20 font-black">
+              Power Your Projects with Bughook UI Components
+            </h1> 
           <p className="my-5 text-base md:text-lg text-muted-foreground">
             Bughook UI is a powerful collection of pre-built, copy-and-paste
             components that make UI development faster and easier. Fully free,
