@@ -32,6 +32,10 @@ export const sidebarData = [
         url: "/docs/fade-text",
       },
       {
+        title: "Code Snippet",
+        url: "/docs/code-snippet",
+      },
+      {
         title: "Examples",
         url: "#",
       },

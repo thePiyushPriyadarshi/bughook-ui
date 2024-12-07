@@ -51,7 +51,7 @@ export function TextShimmer({
   animationDuration = 2,
 }: TextShimmerProps) {
   const combinedClasses = cn(
-    "bg-gradient-to-r relative inline-block from-gray-300 via-gray-700 to-gray-300 bg-clip-tex text-transparent",
+    "bg-gradient-to-r relative inline-block from-gray-300 via-gray-700 to-gray-300 bg-clip-text text-transparent",
     className
   );
 
