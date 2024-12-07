@@ -35,7 +35,7 @@ export const GeminiEffect = ({
   const descriptionOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]); // Fades out
 
   return (
-    <div ref={ref} className={cn("w-full border relative", className)}>
+    <div ref={ref} className={cn("w-full relative", className)}>
       <div className="absolute top-56 w-full">
         <motion.h3
           className="text-center font-semibold text-3xl md:text-5xl lg:text-7xl"

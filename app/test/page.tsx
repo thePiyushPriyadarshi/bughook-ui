@@ -1,8 +1,8 @@
 
 export default function TestPage() {
   return (
-    <div className="flex">
-     TEST
+    <div className="my-10">
+
     </div>
   );
 }
