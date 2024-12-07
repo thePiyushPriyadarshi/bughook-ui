@@ -13,7 +13,6 @@ export async function ComponentSource({ code }: CodeSourceProps) {
     <ScrollArea className="rounded-lg border">
       <div className="max-h-[350px]">{parse(highlightedCode)}</div>
       <ScrollBar orientation="horizontal" />
-
     </ScrollArea>
   );
 }
