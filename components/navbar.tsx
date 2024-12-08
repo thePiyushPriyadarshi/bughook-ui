@@ -3,7 +3,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { navbarData } from "@/data/navbar-data";
 import Link from "next/link";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import Image from "next/image";
+import Image from "next/image"; 
 
 export default function Navbar() {
   return (
@@ -11,9 +11,23 @@ export default function Navbar() {
       <div className="flex gap-1 items-center justify-center">
         <SidebarTrigger className="md:hidden" />
         <Link href={"/"} className="md:flex hidden items-center">
-          <Image src={"/light-logo.png"} alt="logo" className="hidden dark:block" width={50} height={50}/>
-          <Image src={"/dark-logo.png"} alt="logo" className="block dark:hidden" width={50} height={50}/>
-          <h1 className="font-bold text-xl hidden font-sans sm:block">Bughook UI</h1>
+          <Image
+            src={"/light-logo.png"}
+            alt="logo"
+            className="hidden dark:block"
+            width={50}
+            height={50}
+          />
+          <Image
+            src={"/dark-logo.png"}
+            alt="logo"
+            className="block dark:hidden"
+            width={50}
+            height={50}
+          />
+          <h1 className="font-bold text-xl hidden font-sans sm:block">
+            Bughook UI
+          </h1>
         </Link>
       </div>
       <div className="hidden md:flex gap-3 items-center font-medium text-muted-foreground justify-center">
@@ -27,8 +41,9 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-
-      <ModeToggle />
+      <div className="flex">
+        <ModeToggle />
+      </div>
     </nav>
   );
 }

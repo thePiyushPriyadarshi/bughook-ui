@@ -102,7 +102,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -111,7 +110,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 
 .no-scrollbar {
   scrollbar-width: 2px; /* Firefox */
@@ -122,6 +120,6 @@
   display: none; /* Chrome, Safari, Opera */
 }
 
-pre{
-  @apply overflow-x-auto overflow-y-auto h-full text-sm no-scrollbar max-w-full p-4
+pre {
+  @apply overflow-x-auto overflow-y-auto h-full text-sm no-scrollbar max-w-full p-4;
 }
