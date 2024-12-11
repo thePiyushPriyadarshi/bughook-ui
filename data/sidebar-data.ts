@@ -36,6 +36,10 @@ export const sidebarData = [
         url: "/docs/code-snippet",
       },
       {
+        title: "Opacity Trail Text",
+        url: "/docs/opacity-trail-text",
+      },
+      {
         title: "Examples",
         url: "#",
       },

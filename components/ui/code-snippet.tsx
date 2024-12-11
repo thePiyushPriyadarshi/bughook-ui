@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Check, Clipboard, FileCode } from "lucide-react";
 import { bundledLanguages, codeToHtml } from "shiki";
 import { useTheme } from "next-themes";
-import { TextShimmer } from "@/components/ui/text-shimmer";
+import { TextShimmer } from "@/components/ui/shimmer-text";
 
 type ShikiLang = keyof typeof bundledLanguages;
 
