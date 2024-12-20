@@ -4,7 +4,7 @@ export const sidebarData = [
     items: [
       {
         title: "Installation",
-        url: "/docs",
+        url: "/docs/installation",
       },
       {
         title: "Project Structure",
@@ -38,6 +38,10 @@ export const sidebarData = [
       {
         title: "Opacity Trail Text",
         url: "/docs/opacity-trail-text",
+      },
+      {
+        title: "Shake Button",
+        url: "/docs/shake-button",
       },
       {
         title: "Examples",
