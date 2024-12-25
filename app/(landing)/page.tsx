@@ -6,7 +6,7 @@ import { ShowCase } from "./show-case";
 export default function Home() {
   return (
     <div>
-      <div className="h-full w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative">
+      <div className="h-full pb-20 w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="max-w-[768px] w-11/12 mx-auto py-10">
@@ -21,7 +21,7 @@ export default function Home() {
               stunning interfaces in no time.
             </p>
           </div>
-          <Link href={"/docs/button"}>
+          <Link href={"/docs/i"}>
             <Button variant={"animate"} className="py-1.5 group h-fit">
               Get Started
               <ArrowRight className="group-hover:translate-x-1 duration-300" />
