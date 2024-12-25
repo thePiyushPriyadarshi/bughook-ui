@@ -21,7 +21,7 @@ export default function Home() {
               stunning interfaces in no time.
             </p>
           </div>
-          <Link href={"/docs/i"}>
+          <Link href={"/docs/button"}>
             <Button variant={"animate"} className="py-1.5 group h-fit">
               Get Started
               <ArrowRight className="group-hover:translate-x-1 duration-300" />
