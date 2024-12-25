@@ -6,10 +6,10 @@ export const sidebarData = [
         title: "Installation",
         url: "/docs/installation",
       },
-      {
-        title: "Project Structure",
-        url: "/",
-      },
+      // {
+      //   title: "Project Structure",
+      //   url: "/",
+      // },
     ],
   },
   {
@@ -20,20 +20,20 @@ export const sidebarData = [
         url: "/docs/button",
       },
       {
-        title: "Gemini effect",
-        url: "/docs/gemini-effect",
-      },
-      {
-        title: "Text Shimmer",
-        url: "/docs/text-shimmer",
+        title: "Code Snippet",
+        url: "/docs/code-snippet",
       },
       {
         title: "Fade Text",
         url: "/docs/fade-text",
       },
       {
-        title: "Code Snippet",
-        url: "/docs/code-snippet",
+        title: "Gemini effect",
+        url: "/docs/gemini-effect",
+      },
+      {
+        title: "Text Shimmer",
+        url: "/docs/text-shimmer",
       },
       {
         title: "Opacity Trail Text",
@@ -43,21 +43,21 @@ export const sidebarData = [
         title: "Shake Button",
         url: "/docs/shake-button",
       },
-      {
-        title: "Examples",
-        url: "#",
-      },
+      // {
+      //   title: "Examples",
+      //   url: "#",
+      // },
     ],
   },
 
-  {
-    title: "Community",
-    url: "#",
-    items: [
-      {
-        title: "Contribution Guide",
-        url: "#",
-      },
-    ],
-  },
+  // {
+  //   title: "Community",
+  //   url: "#",
+  //   items: [
+  //     {
+  //       title: "Contribution Guide",
+  //       url: "#",
+  //     },
+  //   ],
+  // },
 ];

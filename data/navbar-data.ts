@@ -1,10 +1,10 @@
 export const navbarData = [
-    {
-        label : 'Components',
-        href : '/components'
-    },
-    {
-        label : 'Docs',
-        href : '/docs/button'
-    },
-]
+  {
+    label: "Installation",
+    href: "/docs/installation",
+  },
+  {
+    label: "Components",
+    href: "/docs/button",
+  },
+];

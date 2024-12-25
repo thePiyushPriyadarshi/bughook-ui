@@ -9,14 +9,16 @@ import { FadeText } from "@/components/ui/fade-text";
 export function ShowCase() {
   return (
     <div className="bg-white/80 dark:bg-black/80">
-      <h2 className="text-5xl md:text-7xl text-center font-semibold">
-        <FadeText>Show Case</FadeText>
-        <div className="flex items-center justify-center gap-3">
-            <span className="w-60 h-1 rounded-full bg-primary/50"></span>
-            <span className="w-3 h-1 rounded-full bg-primary/50"></span>
-            <span className="w-1 h-1 rounded-full bg-primary/50"></span>
+      <FadeText>
+        <h2 className="text-5xl md:text-7xl text-center font-semibold">
+          Show Case
+        </h2>
+        <div className="flex items-center justify-center gap-3 mt-2">
+          <span className="w-60 h-1 rounded-full bg-primary/50"></span>
+          <span className="w-3 h-1 rounded-full bg-primary/50"></span>
+          <span className="w-1 h-1 rounded-full bg-primary/50"></span>
         </div>
-      </h2>
+      </FadeText>
       <div className="w-11/12 rounded-lg py-10  mx-auto grid grid-cols-3 md:grid-cols-5 gap-5">
         <div className="col-span-3 border h-[500px] p-3 rounded-lg flex gap-5 flex-col items-center justify-center">
           <GeminiEffectDemo />
